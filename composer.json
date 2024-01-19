@@ -1,0 +1,17 @@
+{
+    "name": "coinhoppa/lib",
+    "description": "Coinhoppa shared library for accessing modules and files in central repo and adopting DRY/SOLID principles.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Coinhoppa\\Lib\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rahel Chowdhury",
+            "email": "rahelahmed79@gmail.com"
+        }
+    ],
+    "require": {}
+}
