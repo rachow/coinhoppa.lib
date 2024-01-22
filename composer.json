@@ -4,8 +4,12 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Coinhoppa\\Lib\\": "src/"
-        }
+            "Coinhoppa\\": "src/",
+            "Coinhoppa\\Database\\Factories\\": "database/factories/",
+            "Coinhoppa\\Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+        ]
     },
     "authors": [
         {
@@ -13,5 +17,14 @@
             "email": "rahelahmed79@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coinhoppa\\Providers\\CoinhoppaServiceProvider",
+                "Coinhoppa\\Providers\\CoinhoppaEventServiceProvider"
+            ]
+        }
+    }
 }
