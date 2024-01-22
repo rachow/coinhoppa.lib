@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "illuminate/support": "^10.41"
+        "illuminate/support": "^10.41",
+        "propaganistas/laravel-phone": "^5.1"
     },
     "extra": {
         "laravel": {
