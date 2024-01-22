@@ -5,6 +5,7 @@
     "autoload": {
         "psr-4": {
             "Coinhoppa\\": "src/",
+            "Coinhoppa\\Helpers\\": "src/Helpers/",
             "Coinhoppa\\Database\\Factories\\": "database/factories/",
             "Coinhoppa\\Database\\Seeders\\": "database/seeders/"
         },
