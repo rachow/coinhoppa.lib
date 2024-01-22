@@ -17,8 +17,9 @@
             "email": "rahelahmed79@gmail.com"
         }
     ],
-    "require": {},
-    "require-dev": {},
+    "require": {
+        "illuminate/support": "^10.41"
+    },
     "extra": {
         "laravel": {
             "providers": [
