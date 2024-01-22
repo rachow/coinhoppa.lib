@@ -20,7 +20,9 @@
     ],
     "require": {
         "illuminate/support": "^10.41",
-        "propaganistas/laravel-phone": "^5.1"
+        "propaganistas/laravel-phone": "^5.1",
+        "illuminate/database": "^10.38",
+        "illuminate/contracts": "^10.41"
     },
     "extra": {
         "laravel": {
@@ -29,5 +31,8 @@
                 "Coinhoppa\\Providers\\CoinhoppaEventServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23"
     }
 }
