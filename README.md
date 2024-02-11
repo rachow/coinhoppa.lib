@@ -13,7 +13,7 @@ Meet 👋 this one approach, a repo that holds a lot of the core platform proces
 Before installation, ask yourself whether these modules and files are required by your Application/SDK/API or any other service.
 Follow the practices below.
  - Your consuming project will make use of the PSR standards to invoke the library modules using the namespace `\\Coinhoppa\\`.
- - Your project does and will not conflict with the above namespace.
+ - Your project does not and will not conflict with the above namespace.
  - You may create symbolic links to map the namespace to a different location within your path structure.
 
 TBC.
