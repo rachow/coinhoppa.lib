@@ -50,7 +50,8 @@ Since a lot of the business processes and components are controlled through the 
 
 There are ideas still floating around and solely depends on the changes to the entire architecture of the platform.
 
-- CNTL Queues / Processes/ Threads
+- CNTL Queues / Processes / Threads
+- CPU / Memory Checks (This will be node/EC2 [x] dependent and thus, SSH remote scripts execution will be needed)
 - Message Bus / Queue
 - Tinkering the platform / Authorization / Policies
 
