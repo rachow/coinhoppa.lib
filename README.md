@@ -42,6 +42,15 @@ Let's say you need to interact with the following, GCC will provide this.
 - Bots (DCA / Arbitrage) and more.
 - Interact with AI Services?
 
+### Sample Flavour
+```
+// Coinhoppa\Console\Exchange
+
+#[AsCommand(name: 'exchange:info')]
+
+protected $signature = 'exchange:info {id: id or UUID of the exchange} {--inactive=0} {--d|deleted=0}';
+
+```
 ### Why?
 
 There are operations that will still need to be performed through the command line, some scripts may need to scheduled, some process may need to be killed or restarted, etc. These are command and the bells and whistles that happen behind the scenes.
