@@ -39,7 +39,8 @@ Let's say you need to interact with the following, GCC will provide this.
   - Get OHLCV for a trading pair
   - Restart service / Reload Cached data
   - Pump data into NoSQL DB / Time-Series
-
+- Bots (DCA / Arbitrage) and more.
+- Interact with AI Services?
 
 ### Why?
 
