@@ -6,7 +6,7 @@
  *  Inject the market services to the IoC
  */
 
-namespace Coinhoppa\Services;
+namespace Coinhoppa\Providers;
 
 use Exception;
 use Illuminate\Support\Facades\App;
