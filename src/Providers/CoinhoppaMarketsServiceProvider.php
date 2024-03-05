@@ -8,7 +8,6 @@
 
 namespace Coinhoppa\Providers;
 
-use Exception;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
@@ -17,6 +16,7 @@ use Illuminate\Support\Str;
 use App\Services\Markets\CoinCap;
 use App\Services\Markets\CoinGecko;
 use App\Services\Markets\CoinMarketCap;
+use Coinhoppa\Exceptions\Markets\MarketsServiceConfigurationException;
 
 class CoinhoppaMarketsServiceProvider extends ServiceProvider implements DeferrableProvider
 {
@@ -33,7 +33,7 @@ class CoinhoppaMarketsServiceProvider extends ServiceProvider implements Deferra
             } elseif (file_exists(__DIR__ . '/../../config/coincap.php')) {
                 $config = collect((object) include __DIR__ . '/../../config/coincap.php');
             } else {
-                throw new \Exception('Coincap Service has no configurations.');
+                throw new MarketsServiceConfigurationException('Coincap Service has no configurations.');
             }
 
             $ssl = (file_exists(__DIR__ . '/../../cert/cacert.pem')) ?
@@ -61,7 +61,7 @@ class CoinhoppaMarketsServiceProvider extends ServiceProvider implements Deferra
                 } elseif (file_exists(__DIR__ . '/../../config/coingecko.php')) {
                     $config = collect((object) include __DIR__ . '/../../config/coingecko.php');
                 } else {
-                    throw new \Exception('CoinGecko Service has no configurations.');
+                    throw new MarketsServiceConfigurationException('CoinGecko Service has no configurations.');
                 }
 
                 $ssl = (file_exists(__DIR__ . '/../../cert/cacert.pem')) ?
@@ -89,7 +89,7 @@ class CoinhoppaMarketsServiceProvider extends ServiceProvider implements Deferra
             } elseif (file_exists(__DIR__ . '/../../config/coinmarketcap.php')) {
                 $config = collect((object) include __DIR__ . '/../../config/coinmarketcap.php');
             } else {
-                throw new \Exception('CoinMarketCap Service has no configurations.');
+                throw new MarketsServiceConfigurationException('CoinMarketCap Service has no configurations.');
             }
 
             $ssl = (file_exists(__DIR__ . '/../../cert/cacert.pem')) ?
