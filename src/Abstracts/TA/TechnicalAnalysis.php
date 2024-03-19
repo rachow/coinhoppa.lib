@@ -6,6 +6,7 @@
 
 namespace Coinhoppa\Abstracts\TA;
 
+use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\Process\Process;
@@ -39,6 +40,21 @@ abstract class TechnicalAnalysis
     ];
 
     /**
+     * Creates an instance.
+     * 
+     * @return void
+     */
+    public function __construct()
+    {
+        if (! \extension_loaded('ext-trader')) {
+            // attempt to load in runtime.
+            if (! \dl('ext-trader.so')) { 
+                throw new Exception('Trading extension is not enabled.');
+            }
+        }
+    }
+
+    /**
      * Grab the constant value for Moving Averages (MA)
      * 
      * @param  string $type
@@ -67,7 +83,7 @@ abstract class TechnicalAnalysis
         $directory = __DIR__ . '/../../Services/TA';
         
         if (! is_dir($directory)) {
-            throw new \Exception('There are no technical indicators.');
+            throw new Exception('There are no technical indicators.');
         }
 
         $indicators = [];
@@ -83,7 +99,7 @@ abstract class TechnicalAnalysis
                 $indicators = Arr::add($indicators, preg_replace("/\.$ext$/", '', $file));        
             }
         } else {
-            throw new \Exception('Could not traverse technical indicators.');
+            throw new Exception('Could not traverse technical indicators.');
         }    
 
         return $this->indicators = $indicators;
