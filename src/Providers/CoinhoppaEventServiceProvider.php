@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Event;
 use Coinhoppa\Observers\TraderObserver;
 use Coinhoppa\Models\Trader;
 
-
 class CoinhoppaEventServiceProvider extends ServiceProvider
 {
     /**
@@ -50,7 +49,7 @@ class CoinhoppaEventServiceProvider extends ServiceProvider
     public function boot()
     {
         parent::boot();
-        
+
         Trader::observe(TraderObserver::class);
     }
 }
