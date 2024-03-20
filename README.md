@@ -3,7 +3,7 @@
 **Coinhoppa** is an experimental project, however as the code base expands, engineering minds begin to ponder on ideas on how to better maintain and separate the business logics
 in the platform into more manageable parts. You will hear terms like "**Microservices**" and "**Service Oriented Architecture (SOA)**" in the tech world these days.
 
-Oh, have you heard about "**API Design First**" approach? Yeap API's are hot🌶️ and they are built widely, build APIs that are designed to be flexible and 
+Oh, have you heard about "**API Design First**" approach? Yeap API's are hot🌶️ and they are built widely, build APIs that are designed to be flexible and robust.
 
 But building REST (**RE**presentational **S**tate **T**ransfer) API's will involve heavy use of shared modules and files that trigger some sort of action. API's must also follow good standards that include the following.
 
