@@ -70,9 +70,8 @@ abstract class TechnicalAnalysis
         $options = [
             'exchange' => $exchange ?? 'binance' // default to binance ?
         ];
-        
-        $data = $this->kline->candle($pair, $intval, $options);
-        return $data;
+
+        return $this->$data = $this->kline->candle($pair, $intval, $options);
     }
 
     /**
