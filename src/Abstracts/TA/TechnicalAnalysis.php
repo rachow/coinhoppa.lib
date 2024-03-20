@@ -9,6 +9,7 @@ namespace Coinhoppa\Abstracts\TA;
 use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Log;
+use Coinhoppa\Services\KlineService;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
@@ -44,7 +45,7 @@ abstract class TechnicalAnalysis
      * 
      * @return void
      */
-    public function __construct()
+    public function __construct(protected KlineService $kline)
     {
         if (! \extension_loaded('ext-trader')) {
             // attempt to load in runtime.
@@ -52,6 +53,26 @@ abstract class TechnicalAnalysis
                 throw new Exception('Trading extension is not enabled.');
             }
         }
+    }
+
+    /**
+     * Fetch the current upto date trading data.
+     *  - Here we will look at some Caching Strategies
+     *  - Do we need to call the Kline Service
+     *  - what is the TTL for the cache aka in Redis
+     * 
+     * @param $pair
+     * @param $intval
+     * @param $exchange - optional
+     */
+    public function getTradingData(string $pair = 'BTC/USD', string $intval = '5m', string $exchange = '')
+    {
+        $options = [
+            'exchange' => $exchange ?? 'binance' // default to binance ?
+        ];
+        
+        $data = $this->kline->candle($pair, $intval, $options);
+        return $data;
     }
 
     /**
