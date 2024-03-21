@@ -4,7 +4,7 @@ return [
 
     /*
     |---------------------------------------------------------
-    | Coincap Api URL
+    | CoinApi Api URL
     |---------------------------------------------------------
     |
     | Here you will need to specify the Service API URL.
@@ -16,7 +16,7 @@ return [
 
     /*
     |---------------------------------------------------------
-    | Coincap Api Version
+    | CoinApi Api Version
     |---------------------------------------------------------
     |
     | You can specify the version otherwise leave empty. Also
@@ -27,7 +27,7 @@ return [
 
     /*
     |---------------------------------------------------------
-    | Coincap Api Token
+    | CoinApi Api Token
     |---------------------------------------------------------
     |
     | If there is a bearer token then specify otherwise null
@@ -37,7 +37,7 @@ return [
 
     /*
     |---------------------------------------------------------
-    | Coincap API X Header Key
+    | CoinApi API X Header Key
     |---------------------------------------------------------
     |
     | We would send an 'X' Header with each request. This allows
