@@ -20,4 +20,4 @@ $factory->define(Trader::class, function (Faker $faker) {
     return [
         //
     ];
-}
+});
