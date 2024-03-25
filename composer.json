@@ -4,8 +4,13 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Coinhoppa\\Lib\\": "src/"
-        }
+            "Coinhoppa\\": "src/",
+            "Coinhoppa\\Helpers\\": "src/Helpers/",
+            "Coinhoppa\\Database\\Factories\\": "database/factories/",
+            "Coinhoppa\\Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+        ]
     },
     "authors": [
         {
@@ -13,5 +18,21 @@
             "email": "rahelahmed79@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "illuminate/support": "^10.41",
+        "propaganistas/laravel-phone": "^5.1",
+        "illuminate/database": "^10.38",
+        "illuminate/contracts": "^10.41"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coinhoppa\\Providers\\CoinhoppaServiceProvider",
+                "Coinhoppa\\Providers\\CoinhoppaEventServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23"
+    }
 }
