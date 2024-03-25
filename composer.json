@@ -11,6 +11,8 @@
         },
         "files": [
         ]
+            "Coinhoppa\\Lib\\": "src/"
+        }
     },
     "authors": [
         {
@@ -18,6 +20,7 @@
             "email": "rahelahmed79@gmail.com"
         }
     ],
+
     "require": {
         "illuminate/support": "^10.41",
         "propaganistas/laravel-phone": "^5.1",
@@ -35,4 +38,7 @@
     "require-dev": {
         "fakerphp/faker": "^1.23"
     }
+=======
+    "require": {}
+
 }
