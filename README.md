@@ -42,7 +42,7 @@ Let's say you need to interact with the following, GCC will provide this.
   - More ...
 - Coins (Trading pairs, Coin details/history/links/docs etc)
 - Kline Service
-  - TCP connection to `://kline.xxx:8787`
+  - TCP connection to `://kline.xxx:8089`
   - Get OHLCV for a trading pair
   - Restart service / Reload Cached data
   - Pump data into NoSQL DB / Time-Series
