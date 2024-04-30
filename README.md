@@ -6,13 +6,14 @@ in the platform into more manageable parts. You will hear terms like "**Microser
 
 Oh, have you heard about "**API Design First**" approach? Yeap API's are hot🌶️ and they are built widely, build APIs that are designed to be flexible and robust.
 
-But building REST (**RE**presentational **S**tate **T**ransfer) API's will involve heavy use of shared modules and files that trigger some sort of action. API's must also follow good standards that include the following.
+But building REST (**RE**presentational **S**tate **T**ransfer) API's will involve heavy use of shared modules that trigger some sort of action within the platform. API's must also follow good standards that include the following.
 
 - Good standard HTTP verbs use.
 - Good authentication. (API's are Stateless)
 - Good security
 - Caching / Pagination / HTTP Compression (gzip)
 
+We have not yet touched on the architecture behind the API(s), Queues, Message Bus, Kafka, BI tools, etc.
 
 Oh, have you heard about "**API Design First**" approach, yeap API's are hot🌶️ and they are built widely. But building REST APIs will involve heavy use of shared modules and files that trigger some
 sort of action.
