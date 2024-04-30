@@ -34,7 +34,7 @@ GCC are CLI (Command Line Interface) commands which are available to the platfor
 
 **Note:** There will be a wiki documentation on this topic!
 
-Let's say you need to interact with the following, GCC will provide this.
+The following are good examples of things that can be tinkered within the platform using GCC.
 
 - Exchange platforms (Health, Tickers, Streams `wss://` , etc)
   - Shutdown, deactivate.
@@ -45,8 +45,9 @@ Let's say you need to interact with the following, GCC will provide this.
   - Get OHLCV for a trading pair
   - Restart service / Reload Cached data
   - Pump data into NoSQL DB / Time-Series
-- Bots (DCA / Arbitrage) and more.
-- Interact with AI Services?
+- Bots (DCA / Arbitrage) interaction and tinkering and more.
+- Interact with AI to get predictions and social network vibes.
+  - Python and Go scripts that analyse the data.
 
 ### Sample Flavour
 ```
