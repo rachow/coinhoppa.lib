@@ -14,7 +14,7 @@ But building REST (**RE**presentational **S**tate **T**ransfer) API's will invol
 - Caching / Pagination / HTTP Compression (gzip)
 
 Meet 👋 this one approach, a repository that holds a lot of the core platform business processes through a unified structure, making the codebase more manageable and scalable.
-=======
+
 Oh, have you heard about "**API Design First**" approach, yeap API's are hot🌶️ and they are built widely. But building REST APIs will involve heavy use of shared modules and files that trigger some
 sort of action.
 
