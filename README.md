@@ -1,24 +1,22 @@
 # Coinhoppa.lib 📘
 
 **Coinhoppa** is an experimental project, however as the code base expands, engineering minds begin to ponder on ideas on how to better maintain and separate the business logics
-in the platform into more manageable parts. You will hear terms like "**Microservices**" and "**Service Oriented Architecture (SOA)**" in the tech world these days.
+in the platform into more manageable parts. You will hear terms like "**Microservices**" and "**Service Oriented Architecture (SOA)**" in the tech world these days. Let's not run before we can walk 🏃...🔥, both Microservices and SOA architectures can create complexities unless you have a large teams to manage the components. The best approach is to build for the future with these architectures in mind. 
 
 
 Oh, have you heard about "**API Design First**" approach? Yeap API's are hot🌶️ and they are built widely, build APIs that are designed to be flexible and robust.
 
-But building REST (**RE**presentational **S**tate **T**ransfer) API's will involve heavy use of shared modules and files that trigger some sort of action. API's must also follow good standards that include the following.
+But building REST (**RE**presentational **S**tate **T**ransfer) API's will involve heavy use of shared modules and files that trigger some sort of action or business logic. API's must also follow good standards that include the following.
 
-- Good standard HTTP verbs use.
-- Good authentication. (API's are Stateless)
-- Good security
-- Caching / Pagination / HTTP Compression (gzip)
+- Good standard use of HTTP verbs (GET, POST, PUT, DELETE, ...)
+- Good standard formatted responses.
+- Good error responses and codes (200-299, 300-399, 400, 505, 502, 503) - Gateway Timeout, Internal Error, etc 😄
+- Good documentation (OpenAPI specs, Swagger, Postman Docs, ...) 🎉
+- Good authentication. (API's are Stateless, Tokens, Basic, JWT, ...)
+- Good security (443, Rate limiting / 429, Dos/DDos mitigation - LB - Load Balanceri, API Gateway/ALB)
+- Caching / Pagination / HTTP Compression (Gzip, ETag, Force Pagination, Offload High procs. Redis/Pools)
 
 Meet 👋 this one approach, a repository that holds a lot of the core platform business processes through a unified structure, making the codebase more manageable and scalable.
-
-Oh, have you heard about "**API Design First**" approach, yeap API's are hot🌶️ and they are built widely. But building REST APIs will involve heavy use of shared modules and files that trigger some
-sort of action.
-
-Meet 👋 this one approach, a repo that holds a lot of the core platform processes through a unified structure, making the codebase more manageable and scalable. 
 
 
 ## Installation
@@ -42,12 +40,13 @@ Let's say you need to interact with the following, GCC will provide this.
   - More ...
 - Coins (Trading pairs, Coin details/history/links/docs etc)
 - Kline Service
-  - TCP connection to `://kline.xxx:8787`
+  - TCP connection to `://kline.xxx:port` (internal service, must be proxied, Gateway API)
   - Get OHLCV for a trading pair
-  - Restart service / Reload Cached data
-  - Pump data into NoSQL DB / Time-Series
+  - Restart service / Reload Cached data / Expire cache (avoid Cache Avalanche 😆)
+  - Pump data into NoSQL DB / Time-Series (Daemons pumping in background)
 - Bots (DCA / Arbitrage) and more.
-- Interact with AI Services?
+- Interact with AI Services (OpenAI)
+- Social markets prediction feeds
 
 ### Sample Flavour
 ```
@@ -70,10 +69,5 @@ There are ideas still floating around and solely depends on the changes to the e
 - CPU / Memory Checks (This will be node/EC2 [x] dependent and thus, SSH remote scripts execution will be needed)
 - Message Bus / Queue
 - Tinkering the platform / Authorization / Policies
-
-... TBC
-=======
- - Your project does and will not conflict with the above namespace.
- - You may create symbolic links to map the namespace to a different location within your path structure.
 
 TBC.
