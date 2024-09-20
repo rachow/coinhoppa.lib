@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+/**
+ *  @author: $rachow
+ *  @copyright: Coinhoppa
+ *
+ *  Needs to be part of the pipeline! Always check for
+ *  unsafe code. In addition to OWASP extensions!
+ *
+ */
+
+require __DIR__ . '/vendor/bin/phpcs';

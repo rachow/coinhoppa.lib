@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @author: $rachow
+ * @copyright: Coinhoppa
+ *
+ *  Simple wrapper in project directory.
+ *
+ */
+
+
+require __DIR__ . '/vendor/bin/canvas';
